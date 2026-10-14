@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feliz Aniversario ❤️</title>
+
+    <meta name="description" content="Una historia de diez años ❤️">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#120b10">
+    <meta property="og:title" content="Feliz Aniversario ❤️">
+    <meta property="og:description" content="Una historia de diez años ❤️">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E❤️%3C/text%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <audio id="musica" loop>
+         <source src="audio/musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="barraProgreso" class="barra-progreso" aria-hidden="true"><span></span></div>
+
+    <button id="btnAtras" class="btn-atras" type="button" aria-label="Volver al capítulo anterior" hidden>← Atrás</button>
+
+    <button id="btnMusica" class="btn-musica" type="button" aria-label="Pausar música" hidden>🔊</button>
+
+    <!-- PORTAL: EL CORAZÓN QUE SE LLENA -->
+    <div class="portal" id="portal" role="dialog" aria-label="Toca el corazón para comenzar">
+        <div class="portal-brillo" aria-hidden="true"></div>
+
+        <p class="pequeno portal-titulo">FELIZ ANIVERSARIO AMOR ❤️</p>
+
+        <button type="button" class="portal-corazon" id="portalCorazon" aria-label="Tocar el corazón">
+            <svg viewBox="0 0 100 92" aria-hidden="true">
+                <defs>
+                    <clipPath id="clipCorazon">
+                        <path d="M50 87C10 57 0 32 17 14 31 0 47 8 50 22 53 8 69 0 83 14 100 32 90 57 50 87Z"/>
+                    </clipPath>
+                    <linearGradient id="gradCorazon" x1="0" y1="1" x2="0" y2="0">
+                        <stop offset="0" stop-color="#e84a8a"/>
+                        <stop offset="1" stop-color="#ffc2dc"/>
+                    </linearGradient>
+                </defs>
+                <g clip-path="url(#clipCorazon)">
+                    <rect width="100" height="92" fill="rgba(255,126,182,.08)"/>
+                    <g id="portalLiquido" class="portal-liquido">
+                        <rect y="3" width="100" height="95" fill="url(#gradCorazon)"/>
+                        <path class="portal-ola" d="M-100 3Q-75-4 -50 3T0 3 50 3 100 3 150 3 200 3V100H-100Z" fill="#ffc2dc"/>
+                    </g>
+                </g>
+                <path class="portal-borde" d="M50 87C10 57 0 32 17 14 31 0 47 8 50 22 53 8 69 0 83 14 100 32 90 57 50 87Z"/>
+            </svg>
+        </button>
+
+        <p class="portal-frase" id="portalFrase">Toca el corazón para comenzar nuestra historia</p>
+
+        <div class="portal-progreso" aria-hidden="true">
+            <div class="portal-barra"><span id="portalBarra"></span></div>
+            <p id="portalContador">0 de 10 años</p>
+        </div>
+    </div>
+
+    <!-- PANTALLA INICIAL -->
+    <main class="inicio" id="inicio">
+
+        <div class="inicio-fondo" aria-hidden="true"></div>
+
+        <div class="contenido">
+
+            <p class="pequeno">PARA TI, AMOR ❤️</p>
+
+            <h1>
+                Una historia que comenzó sin saber
+                todo lo que nos esperaba...
+            </h1>
+
+            <p class="descripcion">
+                Hay historias que comienzan con una fecha,
+                pero la nuestra comenzó mucho antes.
+            </p>
+
+            <button id="btnComenzar">
+                Comenzar nuestra historia
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- CAPÍTULO 1 -->
+<section class="capitulo oculto" id="capitulo1">
+
+    <div class="capitulo1-contenido">
+    
+        <div class="particulas-romanticas">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    <div class="capitulo1-contenido">
+
+        <div class="capitulo1-foto">
+
+            <img
+                src="img/comienzo.jpeg"
+                alt="El comienzo de nuestra historia"
+            >
+
+            <div class="luz-cinematica"></div>  
+            
+            <div class="particulas-romanticas">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <div class="capitulo1-overlay">
+
+                <p class="capitulo1-numero">
+                    CAPÍTULO 1
+                </p>
+
+                <h2>
+                    Donde todo comenzó
+                </h2>
+
+            </div>
+
+        </div>
+
+        <div class="capitulo1-texto">
+
+            <p class="fecha">
+                Febrero de 2014
+            </p>
+
+            <p class="texto">
+                A veces pienso en aquel día y me cuesta creer
+                que, sin saberlo, estaba a punto de encontrarte.
+            </p>
+
+            <p class="texto">
+                Llegué a tu casa sin imaginar que aquella visita
+                cambiaría mi vida para siempre.
+            </p>
+
+            <p class="texto">
+                Tus ojos y esa forma tan especial de hacerme sentir
+                importante comenzaron a conquistarme.
+            </p>
+
+            <p class="texto destacado">
+                Sin saberlo, aquel día comenzó nuestra historia. ❤️
+            </p>
+
+
+            <button id="btnCapitulo2">
+                Continuar nuestra historia →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    </div>
+</section>
+
+<section class="capitulo oculto" id="capitulo2">
+
+    <div class="escena-beso">
+
+        <!-- Corazón formado por partículas -->
+        <canvas id="corazonParticulas"></canvas>
+
+        <!-- Fotografías que aparecerán alrededor -->
+        <div class="recuerdos-beso">
+
+            <img src="img/beso2.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-1">
+            <img src="img/beso3.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-2">
+            <img src="img/beso4.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-3">
+            <img src="img/beso5.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-4">
+            <img src="img/beso6.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-5">
+            <img src="img/beso7.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-6">
+            <img src="img/beso8.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-7">
+            <img src="img/beso9.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-8">
+            <img src="img/beso10.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-9">
+            <img src="img/beso11.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-10">
+            <img src="img/beso12.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-11">
+            <img src="img/beso13.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-12">
+            <img src="img/beso14.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-13">
+            <img src="img/beso15.jpg" alt="Un recuerdo juntos" class="recuerdo-beso recuerdo-14">
+
+        </div>
+
+
+        <!-- Fotografía principal -->
+        <div class="foto-beso-principal">
+            <img src="img/fotoprincipal.jpg" alt="Un recuerdo juntos">
+        </div>
+
+    </div>
+
+   <div class="capitulo2-texto">
+
+    <div class="capitulo2-encabezado">
+
+        <p class="pequeno">CAPÍTULO 2</p>
+
+        <h2>Nuestro primer beso</h2>
+
+    </div>
+
+    <p class="fecha">
+        El comienzo de algo diferente ❤️
+    </p>
+       
+        <p>
+            Acababa de llegar de Medellín y nos vimos en mi casa.
+            Hablamos un rato y, cuando llegó la hora de despedirnos,
+            te di un beso en una mejilla… después en la otra.
+        </p>
+
+        <p>
+            Pero entonces, ya no me pude contener y te di
+            nuestro primer beso.
+        </p>
+
+        <p>
+            Un recuerdo que, aunque pasó hace tantos años,
+            sigue guardado en mi corazón.
+        </p>
+
+
+        <button id="btnCapitulo3">
+            Seguir leyendo ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<!-- CAPÍTULO 3 -->
+<section class="capitulo boda oculto" id="capitulo3">
+
+    <div class="contenido">
+
+        <div class="marco-boda"><img src="img/boda.jpg" alt="Nuestra boda" class="foto-capitulo"></div>
+
+        <p class="pequeno">CAPÍTULO 3</p>
+
+        <div class="fecha-boda">
+            <span>17</span>
+            <small>DICIEMBRE</small>
+            <span>2016</span>
+        </div>
+
+        <h2>El día que dijimos sí</h2>
+
+            <p class="texto">
+                Ese día estaba muy nervioso, esperándote en el altar.
+            </p>
+
+            <p class="texto">
+                Cuando te vi entrar, estabas tan hermosa que la emoción
+                me hizo derramar una lágrima de felicidad.
+            </p>
+
+            <p class="texto">
+                El 17 de diciembre de 2016, frente a Dios,
+                nos dijimos sí.
+            </p>
+
+            <p class="texto destacado">
+                Sí a nuestro amor, a nuestra familia
+                y a toda la historia que nos faltaba por vivir. ❤️
+            </p>
+
+
+        <button id="btnCapitulo4">
+            Continuar nuestra historia ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- CAPÍTULO 4 -->
+<section class="capitulo oculto" id="capitulo4">
+
+    <div class="contenido">
+
+        <p class="pequeno">CAPÍTULO 4</p>
+
+        <h2>Los lugares que hemos recorrido</h2>
+
+       
+        <p class="texto destacado">
+            De todos los lugares que hemos recorrido,
+            mi recuerdo favorito siempre será haberlos vivido contigo. ❤️
+        </p>
+
+
+        <div class="recuerdo">
+
+         <img loading="lazy" decoding="async"
+        src="img/guatape.jpg"
+        alt="Guatapé"
+         >
+
+         <h3>Guatapé</h3>
+
+     <p class="descripcion-recuerdo">
+        Nuestro primer aniversario, una salida que se convirtió
+        en uno de esos recuerdos que siempre llevaremos con nosotros.
+    </p>
+
+    </div>
+
+
+        <div class="recuerdo">
+
+            <img loading="lazy" decoding="async"
+                src="img/parque-cafe.jpg"
+                alt="Parque del Café"
+            >
+
+            <h3>Parque del Café</h3>
+
+            <p class="descripcion-recuerdo">
+                ¿Cómo olvidar
+                el miedo que teníamos al subirnos al cráter?
+            </p>
+
+        </div>
+        <div class="recuerdo">
+
+            <img loading="lazy" decoding="async"
+                src="img/panaca.jpg"
+                alt="Panaca"
+            >
+
+            <h3>Panaca</h3>
+
+            <p class="descripcion-recuerdo">
+                Una conexión increíble con los animales y la naturaleza,
+                y otra experiencia que vivimos juntos.
+            </p>
+
+        </div>
+
+       <div class="recuerdo">
+
+            <img loading="lazy" decoding="async"
+                src="img/desierto.jpg"
+                alt="Desierto de la Tatacoa"
+            >
+
+            <h3>Desierto de la Tatacoa</h3>
+
+            <p class="descripcion-recuerdo">
+                Una experiencia única: recorrer el desierto, contemplar
+                las estrellas y amanecer juntos en el desierto.
+            </p>
+
+        </div>
+
+        <div class="recuerdo">
+
+            <img loading="lazy" decoding="async"
+                src="img/gigante.jpg"
+                alt="La Mano del Gigante"
+            >
+
+            <h3>La Mano del Gigante</h3>
+
+            <p class="descripcion-recuerdo">
+                Un lugar mágico que quedó guardado en nuestra historia
+                por todos los buenos recuerdos que nos dejó.
+            </p>
+
+        </div>
+
+        <div class="recuerdo">
+
+            <img loading="lazy" decoding="async"
+                src="img/covenas.jpg"
+                alt="Coveñas"
+            >
+
+            <h3>Coveñas</h3>
+
+            <p class="descripcion-recuerdo">
+                La pasamos increíble conociendo islas, descubriendo
+                nuevos lugares y disfrutando cada momento juntos.
+            </p>
+
+        </div>
+
+
+        <div class="recuerdo">
+
+            <img loading="lazy" decoding="async"
+                src="img/divertido.jpg"
+                alt="Momentos divertidos"
+            >
+
+            <h3>Momentos divertidos</h3>
+
+            <p class="descripcion-recuerdo">
+                Y también están esos momentos en los que simplemente
+                nos dedicamos a divertirnos y dar vueltas en el carrito.
+            </p>
+
+        </div>
+
+
+        <button id="btnCapitulo5">
+            Continuar nuestra historia ❤️
+        </button>
+
+        </div>
+
+</section>
+    
+<!-- CAPÍTULO 5 -->
+<section class="capitulo oculto" id="capitulo5">
+
+    <div class="contenido">
+
+         <p class="pequeno">CAPÍTULO 5</p>
+
+        <h2>Nuestra familia, nuestro regalo</h2>
+
+        <p class="fecha">
+            Nuestra familia ❤️
+        </p>
+
+        <p class="texto">
+            Después de tantos momentos, Dios nos regaló
+            algo que cambió nuestra historia para siempre.
+        </p>
+
+        <p class="texto destacado">
+            Nos convertimos en papás. 
+        </p>
+
+        <div class="hijas">
+
+            <div class="hija">
+                <img loading="lazy" decoding="async" src="img/vanessa.jpeg" alt="Eimy Vanessa">
+                <h3 class="nombre-hija">Eimy Vanessa</h3>
+                <p>Primero llegaste tú.</p>
+            </div>
+
+            <div class="hija">
+                <img loading="lazy" decoding="async" src="img/valeria.jpeg" alt="Isa Valeria">
+                <h3 class="nombre-hija">Isa Valeria</h3>
+                <p>Y después llegaste tú.</p>
+            </div>
+
+        </div>
+
+        <p class="texto">
+            Y con cada una descubrimos una nueva forma de amar.
+        </p>
+
+        <p class="texto destacado">
+            El corazón no se divide cuando llega otro hijo...<br>
+            el corazón aprende a amar todavía más.
+        </p>
+
+        <p class="texto">
+            Hoy tenemos dos pequeñas razones que nos recuerdan
+            todos los días todo lo que hemos construido juntos.
+        </p>
+
+        <p class="texto destacado">
+            Nuestra familia.
+        </p>
+
+        <p class="texto destacado">
+            Y tienen algo que me llena de orgullo:
+            una mamá que las ama con todo su corazón. ❤️
+        </p>
+
+        <p class="texto destacado">
+            Cuando miro nuestra historia, sé que uno de los regalos
+            más hermosos que hemos construido juntos es nuestra familia.
+        </p>
+
+
+        <button id="btnContinuarCapitulo6" type="button">
+            Continuar nuestra historia ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<!-- CAPÍTULO 6 -->
+<section class="capitulo oculto" id="capitulo6">
+    <div class="contenido">
+
+        <p class="pequeno">CAPÍTULO 6</p>
+
+        <h2>A pesar de todo</h2>
+
+        <p class="texto destacado">
+            Nuestra historia no ha sido perfecta,
+            pero sigue siendo nuestra. 
+        </p>
+
+        <p class="texto">
+            Hemos atravesado días difíciles y aprendido
+            que amar también significa escuchar,
+            cambiar y volver a intentarlo.
+        </p>
+
+        <p class="texto destacado">
+            Y después de todo, todavía te elijo.
+        </p>
+
+        <div class="frase-biblica">
+            <p>
+                “Las muchas aguas no podrán apagar el amor,
+                <br>
+                ni lo ahogarán los ríos.”
+            </p>
+            <span>Cantares 8:7 ❤️</span>
+        </div>
+
+        
+        <button id="btnContinuarCarta">
+            Hay algo más para ti ❤️
+        </button>
+
+
+    </div>
+</section>
+
+<!-- CARTA FINAL -->
+<section class="capitulo oculto" id="carta">
+
+    <!-- PAUSA ANTES DE LA CARTA -->
+    <div class="pausa-carta" id="pausaCarta">
+
+        <p>10 años...</p>
+
+        <span>y todavía elegiría encontrarte. ❤️</span>
+
+    </div>
+
+    <!-- SOBRE -->
+
+    <!-- SOBRE -->
+    <div class="sobre-contenedor" id="sobreContenedor">
+
+        <p class="pequeno">PARA TI, AMOR ❤️</p>
+
+        <div class="sobre" id="sobre">
+            <div class="sobre-solapa"></div>
+
+            <div class="sobre-carta">
+                <span>Una carta para ti</span>
+            </div>
+
+            <div class="sobre-frente">
+                <p>17 · 12 · 2026</p>
+                <strong>Amor</strong>
+            </div>
+        </div>
+
+        <p class="texto-instruccion">
+            Toca el sobre para abrirlo
+        </p>
+
+    </div>
+
+    <!-- CARTA -->
+    <div class="contenido contenido-carta" id="contenidoCarta">
+
+       <p class="pequeno">UNA CARTA PARA TI</p>
+
+        <h2>Amor...</h2>
+
+        <p class="texto">
+            Si llegaste hasta aquí, ya recorriste conmigo diez años
+            de nuestra historia.
+        </p>
+
+        <p class="texto">
+            Una historia con momentos hermosos, viajes, risas,
+            dificultades, aprendizajes y, sobre todo, mucho amor.
+        </p>
+
+        <p class="texto destacado">
+            Y si tuviera que decirte algo después de todo este tiempo,
+            sería simplemente: gracias.
+        </p>
+
+        <p class="texto">
+            Gracias por caminar conmigo, por estar a mi lado,
+            por nuestra familia y por nuestras dos princesas,
+            que hoy son una de las partes más hermosas de nuestra historia.
+        </p>
+
+        <p class="texto">
+            Gracias también por permanecer en los días que no han sido fáciles.
+            Porque nuestra historia nunca ha sido perfecta,
+            pero hemos aprendido a seguir adelante juntos.
+        </p>
+
+        <p class="texto destacado">
+            Y después de diez años, todavía quiero elegirte.
+        </p>
+
+        <p class="texto">
+            Quiero seguir viajando contigo, seguir riéndome contigo,
+            seguir construyendo nuestro hogar y ver crecer a nuestras hijas
+            a nuestro lado.
+        </p>
+
+        <p class="texto">
+            No sé exactamente qué nos traerán los próximos diez,
+            veinte o treinta años...
+        </p>
+
+        <p class="texto destacado">
+            pero sí sé algo:
+        </p>
+
+        <p class="texto destacado">
+            quiero vivirlos contigo.
+        </p>
+
+        <p class="texto">
+            Quiero que sigamos creciendo, aprendiendo,
+            amándonos y poniendo a Dios en el centro de nuestra familia.
+        </p>
+
+        <p class="texto destacado">
+            Te amo, Amor. ❤️
+        </p>
+
+        <p class="texto destacado">
+            Feliz aniversario.
+        </p>
+
+        <p class="texto destacado">
+            Y sí...
+        </p>
+
+        <p class="texto destacado">
+            todavía nos queda mucha historia por escribir.
+        </p>
+
+        <button id="btnFinal">
+            Nuestra historia continúa ❤️
+        </button>
+
+
+    </div>
+
+</section>
+
+<!-- INVITACIÓN: LA VELA -->
+<section class="capitulo oculto" id="invitacion">
+
+    <div class="contenido contenido-invitacion">
+
+        <p class="pequeno inv-pretexto">
+            PERO LA HISTORIA DE HOY NO TERMINA AQUÍ...
+        </p>
+
+        <div class="vela" id="vela" role="button" tabindex="0" aria-label="Encender la vela">
+            <div class="halo-vela"></div>
+            <div class="llama"></div>
+            <div class="mecha"></div>
+            <div class="cuerpo-vela"></div>
+            <div class="plato-vela"></div>
+        </div>
+
+        <p class="inv-pista" id="pistaVela">Toca la vela para encenderla</p>
+
+        <div class="inv-tarjeta">
+
+            <p class="inv-esta-noche">ESTA NOCHE</p>
+
+            <p class="inv-hora">a las 7:00 p. m.</p>
+
+            <p class="inv-linea">
+                Prepárate para una linda sorpresa 
+            </p>
+
+            <p class="inv-linea inv-bonito">
+                Ponte bien hermosa, mi amor,<br>
+                que esta noche la historia la escribimos tú y yo.
+            </p>
+
+        </div>
+
+        <div class="inv-botones">
+
+            <a id="btnAceptar" class="boton-acepto boton-enlace" href="#" target="_blank" rel="noopener" hidden>
+                Acepto tu invitación ❤️
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PANTALLA FINAL -->
+<!-- FINAL -->
+<section class="capitulo oculto" id="final">
+
+    <div class="contenido">
+
+        <h1>
+            Feliz aniversario,<br>
+            mi amor. ❤️
+        </h1>
+
+        <p class="texto destacado">
+            Después de todo, mi lugar sigue siendo a tu lado.
+        </p>
+
+        <p class="pequeno">
+            17 · 12 · 2016
+        </p>
+
+        <p class="contador-final" id="contadorFinal"></p>
+
+        <button id="btnUltimaSorpresa" type="button">
+            Tengo una última sorpresa para ti ❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     VISOR DE FOTOGRAFÍAS
+================================ -->
+
+<div id="visorFoto" class="visor-foto">
+
+    <div class="contenido-visor">
+
+        <img id="fotoAmpliada" src="" alt="">
+
+        <h3 id="tituloFoto"></h3>
+
+        <p id="descripcionFoto"></p>
+
+    </div>
+
+</div>
+
+<canvas id="celebracion" class="celebracion" aria-hidden="true"></canvas>
+
+<p class="hint-carta" id="hintCarta" hidden>Toca la carta para verla completa</p>
+
+<script src="js/app.js"></script>
+<script src="js/portal.js"></script>
+
+</body>
+
+</html>

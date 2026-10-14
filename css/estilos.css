@@ -1,0 +1,4709 @@
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #120b10;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* ================================
+   PANTALLA INICIAL
+================================ */
+
+.inicio {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(18, 11, 16, 0.62),
+            rgba(18, 11, 16, 0.88)
+        ),
+        url("../img/fotoprincipal.jpg") center center / cover no-repeat;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.contenido {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.pequeno {
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+    opacity: 0.7;
+}
+
+.inicio h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    font-weight: normal;
+    margin-bottom: 28px;
+}
+
+.descripcion {
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0.75;
+    margin-bottom: 40px;
+}
+
+
+/* ================================
+   BOTONES
+================================ */
+
+button {
+    border: none;
+
+    padding: 16px 28px;
+
+    border-radius: 50px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    background: #ffffff;
+    color: #120b10;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+
+/* ================================
+   CAPÍTULOS
+================================ */
+
+.capitulo {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 70px 25px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #24111b 0%,
+            #160c12 55%,
+            #120b10 100%
+        );
+}
+
+.oculto {
+    display: none;
+}
+
+.aparecer {
+    animation: aparecer 1.5s ease;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================================
+   TÍTULOS
+================================ */
+
+.capitulo h2 {
+    font-size: 42px;
+    line-height: 1.2;
+
+    font-weight: normal;
+
+    margin-bottom: 18px;
+}
+
+.fecha {
+    font-size: 15px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 45px;
+
+    opacity: 0.6;
+}
+
+
+/* ================================
+   TEXTOS
+================================ */
+
+.texto {
+    font-size: 20px;
+
+    line-height: 1.9;
+
+    margin-bottom: 28px;
+
+    opacity: 0.88;
+}
+
+.texto.destacado {
+    font-size: 25px;
+
+    font-weight: bold;
+
+    line-height: 1.5;
+
+    margin: 45px 0;
+
+    opacity: 1;
+}
+
+
+/* ================================
+   FOTOGRAFÍAS
+================================ */
+
+.foto-capitulo {
+    width: 100%;
+    max-width: 420px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 45px;
+
+    object-fit: contain;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.55);
+
+    animation: aparecerFoto 1.5s ease;
+
+    transition: transform 0.6s ease;
+}
+
+@keyframes aparecerFoto {
+
+    from {
+        opacity: 0;
+        transform: scale(0.94) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+.foto-capitulo:hover {
+    transform: scale(1.02);
+}
+
+
+/* ================================
+   FECHA DE LA BODA
+================================ */
+
+.fecha-boda {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    margin: 35px 0;
+}
+
+.fecha-boda span {
+    font-size: 82px;
+
+    line-height: 0.9;
+
+    font-weight: normal;
+}
+
+.fecha-boda small {
+    font-size: 14px;
+
+    letter-spacing: 6px;
+
+    margin: 14px 0;
+
+    opacity: 0.65;
+}
+
+
+/* ================================
+   RECUERDOS / VIAJES
+================================ */
+
+.recuerdo {
+    margin: 70px 0;
+}
+
+.recuerdo img {
+    width: 100%;
+    max-width: 420px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 20px;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.5);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.recuerdo img:hover {
+    transform: scale(1.02);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.65);
+}
+
+.recuerdo h3 {
+    font-size: 25px;
+
+    margin-bottom: 12px;
+
+    letter-spacing: 1px;
+}
+
+.descripcion-recuerdo {
+    max-width: 400px;
+
+    margin: 0 auto;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    opacity: 0.7;
+}
+
+@keyframes aparecerRecuerdo {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================================
+   CARTA FINAL
+================================ */
+
+#carta {
+    background:
+        radial-gradient(
+            circle at center,
+            #321522 0%,
+            #180c13 55%,
+            #10090d 100%
+        );
+}
+
+#carta .contenido {
+    max-width: 650px;
+}
+
+
+/* ================================
+   PANTALLA FINAL
+================================ */
+
+#final {
+    background:
+        radial-gradient(
+            circle at center,
+            #421b2a 0%,
+            #1b0d15 50%,
+            #0d080b 100%
+        );
+
+    animation: aparecerFondoFinal 2s ease forwards;
+}
+
+@keyframes aparecerFondoFinal {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+#final h1 {
+    font-size: 48px;
+
+    line-height: 1.25;
+
+    font-weight: normal;
+
+    margin-bottom: 35px;
+}
+
+#final .texto.destacado {
+    font-size: 27px;
+}
+
+
+/* ================================
+   CELULARES
+================================ */
+
+@media (max-width: 600px) {
+
+    .inicio {
+        padding: 25px 22px;
+    }
+
+    .inicio h1 {
+        font-size: 32px;
+    }
+
+    .descripcion {
+        font-size: 17px;
+    }
+
+    .capitulo {
+        padding: 60px 22px;
+    }
+
+    .capitulo h2 {
+        font-size: 34px;
+    }
+
+    .texto {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .texto.destacado {
+        font-size: 22px;
+    }
+
+    .foto-capitulo {
+        max-width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .fecha-boda span {
+        font-size: 65px;
+    }
+
+    .recuerdo {
+        margin: 60px 0;
+    }
+
+    .recuerdo h3 {
+        font-size: 23px;
+    }
+
+    .descripcion-recuerdo {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    #final h1 {
+        font-size: 36px;
+    }
+
+    #final .texto.destacado {
+        font-size: 24px;
+    }
+
+}
+
+/* ================================
+   PORTADA ESPECIAL
+================================ */
+
+.inicio {
+    position: relative;
+    overflow: hidden;
+}
+
+.inicio::before {
+    content: "❤️";
+
+    position: absolute;
+
+    font-size: 180px;
+
+    opacity: 0.04;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    animation: latido 4s ease-in-out infinite;
+}
+
+.inicio .contenido {
+    position: relative;
+    z-index: 1;
+
+    animation: entradaPortada 1.8s ease;
+}
+
+@keyframes entradaPortada {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.08);
+    }
+
+}
+
+/* ================================
+   RITMO DE LA HISTORIA
+================================ */
+
+.capitulo .contenido > * {
+    animation: entradaElemento 0.8s ease both;
+}
+
+.capitulo .contenido > *:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.capitulo .contenido > *:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.capitulo .contenido > *:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.capitulo .contenido > *:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+@keyframes entradaElemento {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ================================
+   ÁLBUM DE RECUERDOS
+================================ */
+
+#capitulo4 .contenido {
+    max-width: 700px;
+}
+
+#capitulo4 .recuerdo {
+    min-height: 82vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#capitulo4 .recuerdo img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 58vh;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 25px;
+}
+
+#capitulo4 .recuerdo h3 {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+#capitulo4 .descripcion-recuerdo {
+    max-width: 440px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* ================================
+   SEPARACIÓN ENTRE RECUERDOS
+================================ */
+
+#capitulo4 .recuerdo:not(:last-of-type)::after {
+    content: "✦";
+    display: block;
+    margin-top: 45px;
+    font-size: 14px;
+    opacity: 0.35;
+}
+
+#capitulo4 .recuerdo img {
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+#capitulo4 .recuerdo img:hover {
+    transform: scale(1.025);
+    filter: brightness(1.05);
+}
+
+#capitulo4 .recuerdo h3 {
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+#capitulo4 .descripcion-recuerdo {
+    opacity: 0.75;
+}
+
+
+/* ================================
+   ENTRADA SUAVE DE LOS RECUERDOS
+================================ */
+
+#capitulo4 .recuerdo {
+    opacity: 0;
+    transform: translateY(35px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+#capitulo4 .recuerdo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ================================
+   AMBIENTE DE CADA CAPÍTULO
+================================ */
+
+#capitulo1 {
+    background:
+        radial-gradient(
+            circle at center,
+            #38202b 0%,
+            #1a0d14 55%,
+            #120b10 100%
+        );
+}
+
+#capitulo2 {
+    background:
+        radial-gradient(
+            circle at center,
+            #542438 0%,
+            #24101b 55%,
+            #120b10 100%
+        );
+}
+
+#capitulo3 {
+    background:
+        radial-gradient(
+            circle at center,
+            #51313b 0%,
+            #211319 55%,
+            #100b0f 100%
+        );
+}
+
+#capitulo4 {
+    background:
+        radial-gradient(
+            circle at center,
+            #20252c 0%,
+            #111419 55%,
+            #0d0d10 100%
+        );
+}
+
+#capitulo5 {
+    background:
+        radial-gradient(
+            circle at center,
+            #30202a 0%,
+            #170d13 55%,
+            #10090d 100%
+        );
+}
+
+#capitulo6 {
+    background:
+        radial-gradient(
+            circle at center,
+            #29222c 0%,
+            #140d16 55%,
+            #0e090d 100%
+        );
+}
+
+#capitulo7 {
+    background:
+        radial-gradient(
+            circle at center,
+            #38202d 0%,
+            #180c14 55%,
+            #10090d 100%
+        );
+}
+
+#capitulo8 {
+    background:
+        radial-gradient(
+            circle at center,
+            #41202b 0%,
+            #190c13 55%,
+            #10090d 100%
+        );
+}
+
+/* ================================
+   TRANSICIÓN ENTRE CAPÍTULOS
+================================ */
+
+.salir {
+    animation: salirCapitulo 0.5s ease forwards;
+}
+
+@keyframes salirCapitulo {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* ================================
+   BOTÓN DEL CAPÍTULO 1
+================================ */
+
+#capitulo1 button {
+    margin-top: 20px;
+}
+
+/* ================================
+   TÍTULO DEL CAPÍTULO 1
+================================ */
+
+#capitulo1 h2 {
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+/* ================================
+   FOTO DE LA BODA
+================================ */
+
+#capitulo3 .foto-capitulo {
+    max-width: 480px;
+    border-radius: 18px;
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.6);
+}
+/* ================================
+   PAUSA EMOCIONAL - CAPÍTULO 5
+================================ */
+
+#capitulo5 .pausa-amor {
+    font-size: 32px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    letter-spacing: 1px;
+}
+
+/* ================================
+   CAPÍTULO 6 - FAMILIA
+================================ */
+
+#capitulo6 .texto.destacado {
+    font-size: 27px;
+    line-height: 1.55;
+}
+
+/* ================================
+   PROMESA - CAPÍTULO 8
+================================ */
+
+#capitulo8 .texto.destacado {
+    font-size: 28px;
+    line-height: 1.7;
+    font-style: italic;
+    margin-top: 60px;
+    margin-bottom: 25px;
+}
+
+#capitulo8 .texto.destacado + .texto.destacado {
+    font-size: 15px;
+    font-style: normal;
+    letter-spacing: 3px;
+    margin-top: 0;
+    opacity: 0.6;
+}
+
+/* ================================
+   CARTA FINAL - CIERRE
+================================ */
+
+#carta .texto {
+    line-height: 2;
+}
+
+#carta .texto.destacado {
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+/* ================================
+   CIERRE FINAL
+================================ */
+
+#final {
+    position: relative;
+    overflow: hidden;
+}
+
+#final::before {
+    content: "❤️";
+
+    position: absolute;
+
+    font-size: 220px;
+
+    opacity: 0.035;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    animation: latidoFinal 3.5s ease-in-out infinite;
+}
+
+#final .contenido {
+    position: relative;
+    z-index: 1;
+}
+
+#final .contenido > * {
+    opacity: 0;
+    animation: entradaFinal 1s ease forwards;
+}
+
+#final .contenido > *:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+#final .contenido > *:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+#final .contenido > *:nth-child(3) {
+    animation-delay: 1.4s;
+}
+
+#final .contenido > *:nth-child(4) {
+    animation-delay: 2s;
+}
+
+#final .contenido > *:nth-child(5) {
+    animation-delay: 2.6s;
+}
+
+@keyframes entradaFinal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes latidoFinal {
+
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.06);
+    }
+
+}
+
+/* VISOR DE FOTOGRAFÍAS */
+.visor-foto {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.92);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.visor-foto.activo {
+    opacity: 1;
+    visibility: visible;
+}
+
+.visor-foto img {
+    max-width: 95vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+    border-radius: 16px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+
+    transform: scale(0.92);
+    transition: transform 0.3s ease;
+}
+
+.visor-foto.activo img {
+    transform: scale(1);
+}
+
+/* CONTENIDO DEL VISOR */
+
+.contenido-visor {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.contenido-visor {
+    animation: entradaVisor 0.5s ease;
+}
+
+@keyframes entradaVisor {
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+.contenido-visor h3 {
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 28px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.contenido-visor p {
+    max-width: 550px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.7;
+    opacity: 0.75;
+}
+
+/* ==============================
+   SOBRE DE LA CARTA
+============================== */
+
+.sobre-contenedor {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.sobre-contenedor .pequeno {
+    margin-bottom: 35px;
+    letter-spacing: 3px;
+    opacity: 0;
+    animation: aparecerSobreTexto 1s ease forwards;
+}
+
+.sobre {
+    position: relative;
+    width: 320px;
+    height: 210px;
+    cursor: pointer;
+    perspective: 1000px;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,.5));
+    animation: aparecerSobre 1.2s ease forwards;
+}
+
+/* Cuerpo del sobre */
+
+.sobre-frente {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, #f5e7d0, #d9b98b);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #4b3020;
+    z-index: 3;
+}
+
+.sobre-frente::before,
+.sobre-frente::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 145%;
+    background: rgba(80,50,30,.15);
+    top: -20%;
+}
+
+.sobre-frente::before {
+    left: 50%;
+    transform: rotate(55deg);
+}
+
+.sobre-frente::after {
+    right: 50%;
+    transform: rotate(-55deg);
+}
+
+.sobre-frente p {
+    margin: 0 0 12px;
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+.sobre-frente strong {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: normal;
+}
+
+/* Solapa */
+
+.sobre-solapa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 115px;
+    background: linear-gradient(145deg, #e8cfaa, #cda878);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top center;
+    z-index: 5;
+    transition: transform 1s ease;
+}
+
+/* Carta que se asoma */
+
+.sobre-carta {
+    position: absolute;
+    left: 8%;
+    width: 84%;
+    height: 175px;
+    top: 20px;
+    background: #fffaf0;
+    color: #4b3020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    border-radius: 3px;
+    z-index: 2;
+    transition: transform 1s ease;
+}
+
+.sobre-carta span {
+    opacity: .75;
+}
+
+/* Instrucción */
+
+.texto-instruccion {
+    margin-top: 30px;
+    font-size: 15px;
+    opacity: .65;
+    animation: pulsarInstruccion 2s ease-in-out infinite;
+}
+
+/* Animaciones */
+
+@keyframes aparecerSobre {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes aparecerSobreTexto {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulsarInstruccion {
+    0%, 100% {
+        opacity: .45;
+    }
+
+    50% {
+        opacity: .9;
+    }
+}
+
+/* Cuando el sobre se abre */
+
+.sobre.abierto .sobre-solapa {
+    transform: rotateX(180deg);
+}
+
+.sobre.abierto .sobre-carta {
+    transform: translateY(-110px);
+}
+
+.contenido-carta {
+    display: none;
+}
+
+.contenido-carta.carta-visible {
+    display: block;
+    animation: aparecerCarta 1.5s ease forwards;
+}
+
+@keyframes aparecerCarta {
+
+    from {
+        opacity: 0;
+        transform: translateY(-80px) scale(.92);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(20px) scale(1.01);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.contenido-carta {
+    display: none;
+}
+
+.contenido-carta.carta-visible {
+    display: block;
+    animation: aparecerCarta 1.5s ease forwards;
+}
+
+@keyframes aparecerCarta {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   HOJA DE LA CARTA
+============================== */
+
+.contenido-carta {
+    background: linear-gradient(
+        145deg,
+        #f5e7d0,
+        #ead4b5
+    );
+
+    color: #4b3020;
+
+    padding: 65px 55px;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, .45),
+        0 0 0 1px rgba(90, 55, 30, .12);
+
+    position: relative;
+}
+
+.contenido-carta::before {
+    content: "";
+
+    position: absolute;
+    inset: 14px;
+
+    border: 1px solid rgba(90, 55, 30, .12);
+
+    pointer-events: none;
+}
+
+.contenido-carta .pequeno {
+    color: #4b3020;
+    opacity: .65;
+}
+
+.contenido-carta h2 {
+    color: #4b3020;
+}
+
+.contenido-carta .texto {
+    color: #4b3020;
+    opacity: .9;
+}
+
+.contenido-carta .texto.destacado {
+    color: #3b2418;
+}
+
+.contenido-carta button {
+    background: #4b3020;
+    color: #fffaf0;
+}
+
+.sobre-abierto {
+    opacity: 0;
+    transform: scale(.96) translateY(-20px);
+    transition: opacity .7s ease, transform .7s ease;
+    pointer-events: none;
+}
+
+/* Entrada del encabezado de la carta */
+
+.contenido-carta.carta-visible .pequeno {
+    animation: aparecerEncabezado 1s ease forwards;
+}
+
+.contenido-carta.carta-visible h2 {
+    opacity: 0;
+    animation: aparecerTituloCarta 1s ease forwards;
+    animation-delay: .5s;
+}
+
+@keyframes aparecerEncabezado {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecerTituloCarta {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==============================
+   PAUSA ANTES DE LA CARTA
+============================== */
+
+.pausa-carta {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    background: radial-gradient(
+        circle at center,
+        #24151b 0%,
+        #100b0e 55%,
+        #050505 100%
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 30px;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.pausa-carta p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    opacity: 0;
+
+    animation: aparecerPausa 1.5s ease forwards;
+}
+
+.pausa-carta span {
+    margin-top: 18px;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    line-height: 1.6;
+    opacity: 0;
+
+    animation: aparecerPausa 1.5s ease forwards;
+    animation-delay: .8s;
+}
+
+.pausa-carta.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pausa-carta.ocultar {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+@keyframes aparecerPausa {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ==============================
+   FRASE ANTES DEL FINAL
+============================== */
+
+.frase-final {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 30px;
+
+    background: #050505;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.frase-final.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.frase-final p {
+    margin: 0 0 25px;
+
+    font-size: 15px;
+    letter-spacing: 5px;
+
+    opacity: 0;
+    animation: aparecerFraseFinal 1.2s ease forwards;
+}
+
+.frase-final span {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+    line-height: 1.5;
+
+    opacity: 0;
+
+    animation: aparecerFraseFinal 1.2s ease forwards;
+    animation-delay: .7s;
+}
+
+.frase-final strong {
+    margin-top: 30px;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 1.5;
+
+    opacity: 0;
+
+    animation: aparecerFraseFinal 1.2s ease forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes aparecerFraseFinal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* FOTOS DE NUESTRAS HIJAS */
+
+.hijas {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin: 70px auto;
+    width: 100%;
+    max-width: 520px;
+}
+
+.hija {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.hija img {
+    width: 100%;
+    max-width: 420px;
+    max-height: 520px;
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, .45),
+        0 0 0 1px rgba(255, 255, 255, .08);
+
+    transition:
+        transform .8s ease,
+        box-shadow .8s ease;
+}
+
+.hija.visible img {
+    animation: aparecerFotoHija 1.4s ease forwards;
+}
+
+.hija img:hover {
+    transform: scale(1.02);
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, .55),
+        0 0 0 1px rgba(255, 255, 255, .12);
+}
+
+@keyframes aparecerFotoHija {
+    from {
+        opacity: 0;
+        transform: scale(.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hija p {
+    margin-top: 25px;
+    font-family: Georgia, serif;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+/* Cuando la foto entra en pantalla */
+
+.hija.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Movimiento suave de las fotografías */
+
+.hija {
+    position: relative;
+}
+
+.hija:nth-child(1) img {
+    transform: rotate(-2deg);
+    animation: movimientoFoto1 6s ease-in-out infinite;
+}
+
+.hija:nth-child(2) img {
+    transform: rotate(2deg);
+    animation: movimientoFoto2 6s ease-in-out infinite;
+}
+
+@keyframes movimientoFoto1 {
+    0%, 100% {
+        transform: rotate(-2deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-1deg) translateY(-6px);
+    }
+}
+
+@keyframes movimientoFoto2 {
+    0%, 100% {
+        transform: rotate(2deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(1deg) translateY(-6px);
+    }
+}
+
+.hija img:hover {
+    transform: rotate(0deg) scale(1.03);
+}
+
+/* MOMENTOS DE AMOR */
+
+.momentos-amor {
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    text-align: center;
+}
+
+.momentos-amor p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    line-height: 1.4;
+
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+.momentos-amor p:nth-child(2) {
+    font-size: 30px;
+}
+
+/* Cuando el capítulo aparece */
+
+.momentos-amor p {
+    animation: aparecerMomento 1.3s ease forwards;
+}
+
+.momentos-amor p:nth-child(2) {
+    animation-delay: .8s;
+}
+
+@keyframes aparecerMomento {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FRASE ESPECIAL - ESPOSA */
+
+.frase-esposa {
+    margin: 100px auto;
+    text-align: center;
+    position: relative;
+    padding: 35px 20px;
+}
+
+.frase-esposa::before,
+.frase-esposa::after {
+    content: "✦";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    opacity: .45;
+}
+
+.frase-esposa::before {
+    top: 0;
+}
+
+.frase-esposa::after {
+    bottom: 0;
+}
+
+.frase-esposa span {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    line-height: 1.4;
+
+    opacity: 0;
+    transform: scale(.94);
+
+    animation: aparecerEsposa 1.5s ease forwards;
+}
+
+@keyframes aparecerEsposa {
+    from {
+        opacity: 0;
+        transform: scale(.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* FRASE - SEGUIR CONSTRUYENDO */
+
+.frase-construir {
+    margin: 100px auto;
+    text-align: center;
+    position: relative;
+    padding: 35px 20px;
+}
+
+.frase-construir::before,
+.frase-construir::after {
+    content: "✦";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    opacity: .45;
+}
+
+.frase-construir::before {
+    top: 0;
+}
+
+.frase-construir::after {
+    bottom: 0;
+}
+
+.frase-construir span {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 32px;
+    line-height: 1.4;
+    opacity: 0;
+    transform: scale(.94);
+    animation: aparecerConstruir 1.5s ease forwards;
+}
+
+@keyframes aparecerConstruir {
+    from {
+        opacity: 0;
+        transform: scale(.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* MOMENTOS ESPECIALES DE LA CARTA */
+
+.contenido-carta .texto.destacado {
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
+.contenido-carta .texto.destacado:first-of-type {
+    font-size: 28px;
+}
+
+.contenido-carta button {
+    margin-top: 80px;
+}
+
+/* CIERRE DEL CAPÍTULO 7 */
+
+.cierre-amor {
+    margin: 100px auto 80px;
+    text-align: center;
+}
+
+.cierre-amor p {
+    margin: 25px 0;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    line-height: 1.4;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecerCierreAmor 1.2s ease forwards;
+}
+
+.cierre-amor p:nth-child(2) {
+    animation-delay: .5s;
+}
+
+.cierre-amor p:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.cierre-amor p:nth-child(4) {
+    font-size: 36px;
+    animation-delay: 1.5s;
+}
+
+@keyframes aparecerCierreAmor {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* CENTRADO DE LA CARTA */
+
+#carta .contenido-carta {
+    width: 100%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* CENTRAR LA CARTA */
+
+#carta {
+    flex-direction: column;
+}
+
+#carta .contenido-carta {
+    width: 100%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* EL SOBRE DEJA DE OCUPAR ESPACIO AL ABRIRSE */
+
+#carta .sobre-contenedor.sobre-abierto {
+    display: none;
+}
+
+/* ==============================
+   ENTRADA DEL TEXTO DE LA CARTA
+============================== */
+
+.contenido-carta.carta-visible > * {
+    opacity: 0;
+    transform: translateY(15px);
+    animation: aparecerTextoCarta 0.9s ease forwards;
+}
+
+.contenido-carta.carta-visible > *:nth-child(1) {
+    animation-delay: .2s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(2) {
+    animation-delay: .4s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(3) {
+    animation-delay: .6s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(4) {
+    animation-delay: .8s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(8) {
+    animation-delay: 1.6s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(9) {
+    animation-delay: 1.8s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(10) {
+    animation-delay: 2s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(11) {
+    animation-delay: 2.2s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(12) {
+    animation-delay: 2.4s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(13) {
+    animation-delay: 2.6s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(14) {
+    animation-delay: 2.8s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(15) {
+    animation-delay: 3s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(16) {
+    animation-delay: 3.2s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(17) {
+    animation-delay: 3.4s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(18) {
+    animation-delay: 3.6s;
+}
+
+.contenido-carta.carta-visible > *:nth-child(19) {
+    animation-delay: 3.8s;
+}
+
+@keyframes aparecerTextoCarta {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ================================
+   CAPÍTULO 1 - INICIO CINEMATOGRÁFICO
+================================ */
+
+#capitulo1 {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding: 0 20px 90px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #38202b 0%,
+            #170c13 55%,
+            #090609 100%
+        );
+
+    overflow: hidden;
+}
+
+.capitulo1-contenido {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ================================
+   FOTO PRINCIPAL
+================================ */
+
+.capitulo1-foto {
+    position: relative;
+
+    width: calc(100% + 40px);
+    margin-left: -20px;
+
+    height: 88vh;
+    min-height: 560px;
+
+    overflow: hidden;
+
+    border-radius: 0 0 35px 35px;
+
+    box-shadow:
+        0 35px 80px rgba(0, 0, 0, 0.75);
+
+    animation: capitulo1Entrada 1.8s ease both;
+}
+
+.capitulo1-foto img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transform: scale(1.04);
+
+    animation: capitulo1Zoom 12s ease-out forwards;
+}
+
+/* ================================
+   ATMÓSFERA SOBRE LA FOTO
+================================ */
+
+.capitulo1-foto::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(8, 5, 7, 0.15) 0%,
+            rgba(8, 5, 7, 0.05) 35%,
+            rgba(8, 5, 7, 0.35) 60%,
+            rgba(8, 5, 7, 0.95) 100%
+        );
+
+    pointer-events: none;
+}
+
+/* ================================
+   TEXTO SOBRE LA FOTO
+================================ */
+
+.capitulo1-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    padding: 70px 30px;
+
+    text-align: center;
+}
+
+/* CAPÍTULO */
+
+.capitulo1-numero {
+    margin-bottom: 18px;
+
+    font-size: 12px;
+    letter-spacing: 6px;
+
+    opacity: 0;
+
+    animation:
+        aparecerCapitulo1Texto 1.2s ease forwards;
+
+    animation-delay: 0.8s;
+}
+
+/* TÍTULO */
+
+.capitulo1-overlay h2 {
+    margin: 0;
+
+    font-size: 58px;
+    line-height: 1.08;
+
+    font-weight: normal;
+
+    opacity: 0;
+
+    text-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.8);
+
+    animation:
+        aparecerCapitulo1Titulo 1.4s ease forwards;
+
+    animation-delay: 1.2s;
+}
+
+/* ================================
+   TEXTO DE LA HISTORIA
+================================ */
+
+.capitulo1-texto {
+    max-width: 650px;
+
+    margin: 75px auto 0;
+
+    text-align: center;
+}
+
+/* FECHA */
+
+.capitulo1-texto .fecha {
+    margin-bottom: 55px;
+
+    font-size: 14px;
+
+    letter-spacing: 5px;
+
+    opacity: 0.5;
+}
+
+/* PÁRRAFOS */
+
+.capitulo1-texto .texto {
+    max-width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    opacity: 0.88;
+}
+
+/* ================================
+   FRASE "Y ALLÍ ESTABAS TÚ"
+================================ */
+
+.capitulo1-texto .texto.destacado {
+    position: relative;
+
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+    padding: 55px 20px;
+
+    font-size: 36px;
+
+    font-weight: normal;
+
+    line-height: 1.35;
+
+    letter-spacing: 1px;
+}
+
+/* Línea superior */
+
+.capitulo1-texto .texto.destacado::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 15px;
+
+    opacity: 0.5;
+}
+
+/* Línea inferior */
+
+.capitulo1-texto .texto.destacado::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    width: 55px;
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* ================================
+   BOTÓN
+================================ */
+
+.capitulo1-texto button {
+    margin-top: 5px;
+
+    opacity: 0;
+
+    animation:
+        aparecerCapitulo1Boton 1s ease forwards;
+
+    animation-delay: 2s;
+}
+
+/* ================================
+   ANIMACIONES
+================================ */
+
+@keyframes capitulo1Entrada {
+
+    from {
+        opacity: 0;
+        transform: scale(1.03);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+@keyframes capitulo1Zoom {
+
+    from {
+        transform: scale(1.08);
+    }
+
+    to {
+        transform: scale(1);
+    }
+
+}
+
+@keyframes aparecerCapitulo1Texto {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 0.75;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes aparecerCapitulo1Titulo {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes aparecerCapitulo1Boton {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ================================
+   CAPÍTULO 1 - CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+    #capitulo1 {
+        padding: 0 18px 70px;
+    }
+
+    .capitulo1-foto {
+        width: calc(100% + 36px);
+        margin-left: -18px;
+
+        height: 78vh;
+        min-height: 500px;
+
+        border-radius: 0 0 28px 28px;
+    }
+
+    .capitulo1-foto img {
+        object-position: center center;
+    }
+
+    .capitulo1-overlay {
+        padding: 45px 22px 55px;
+    }
+
+    .capitulo1-numero {
+        font-size: 10px;
+        letter-spacing: 5px;
+    }
+
+    .capitulo1-overlay h2 {
+        font-size: 40px;
+        line-height: 1.12;
+    }
+
+    .capitulo1-texto {
+        margin-top: 60px;
+    }
+
+    .capitulo1-texto .fecha {
+        margin-bottom: 40px;
+        font-size: 12px;
+        letter-spacing: 4px;
+    }
+
+    .capitulo1-texto .texto {
+        font-size: 18px;
+        line-height: 1.85;
+    }
+
+    .capitulo1-texto .texto.destacado {
+        margin-top: 70px;
+        margin-bottom: 70px;
+
+        padding: 50px 15px;
+
+        font-size: 29px;
+    }
+
+}
+/* ==================================================
+   CAPÍTULO 1 — DONDE TODO COMENZÓ
+   ESCENA CINEMATOGRÁFICA ROMÁNTICA
+================================================== */
+
+#capitulo1 {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 0 20px 100px;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            #3b202d 0%,
+            #1b0e16 45%,
+            #0b070a 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* LUZ AMBIENTAL */
+
+#capitulo1::before {
+    content: "";
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -220px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: rgba(170, 92, 125, 0.12);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+
+/* CONTENEDOR */
+
+.capitulo1-contenido {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   FOTO
+================================================== */
+
+.capitulo1-foto {
+    position: relative;
+
+    width: calc(100% + 40px);
+    height: 88vh;
+
+    min-height: 560px;
+
+    margin-left: -20px;
+
+    overflow: hidden;
+
+    border-radius: 0 0 38px 38px;
+
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.8);
+
+    animation:
+        entradaFotoCapitulo1 1.8s ease both;
+}
+
+
+/* FOTO */
+
+.capitulo1-foto img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transform: scale(1.08);
+
+    animation:
+        zoomFotoCapitulo1 14s ease-out forwards;
+}
+
+
+/* OSCURECIMIENTO CINEMATOGRÁFICO */
+
+.capitulo1-foto::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(5, 3, 5, 0.05) 0%,
+            rgba(5, 3, 5, 0.02) 35%,
+            rgba(5, 3, 5, 0.35) 58%,
+            rgba(5, 3, 5, 0.92) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   TEXTO SOBRE LA FOTO
+================================================== */
+
+.capitulo1-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    padding: 70px 30px;
+
+    text-align: center;
+}
+
+
+/* CAPÍTULO */
+
+.capitulo1-numero {
+    margin: 0 0 18px;
+
+    font-size: 11px;
+
+    letter-spacing: 6px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    opacity: 0;
+
+    animation:
+        aparecerNumeroCapitulo1 1.2s ease forwards;
+
+    animation-delay: 0.7s;
+}
+
+
+/* TÍTULO */
+
+.capitulo1-overlay h2 {
+    margin: 0;
+
+    font-size: 58px;
+
+    line-height: 1.08;
+
+    font-weight: normal;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 5px 30px rgba(0, 0, 0, 0.85);
+
+    opacity: 0;
+
+    animation:
+        aparecerTituloCapitulo1 1.5s ease forwards;
+
+    animation-delay: 1.1s;
+}
+
+
+/* ==================================================
+   TEXTO
+================================================== */
+
+.capitulo1-texto {
+    max-width: 650px;
+
+    margin: 85px auto 0;
+
+    text-align: center;
+}
+
+
+/* FECHA */
+
+.capitulo1-texto .fecha {
+    margin-bottom: 55px;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* PÁRRAFOS */
+
+.capitulo1-texto .texto {
+    max-width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* ==================================================
+   "Y ENTONCES TE VI"
+================================================== */
+
+.capitulo1-texto .texto.destacado {
+    position: relative;
+
+    margin-top: 85px;
+
+    margin-bottom: 85px;
+
+    padding: 55px 20px;
+
+    font-size: 38px;
+
+    line-height: 1.3;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+    color: #ffffff;
+}
+
+
+/* PEQUEÑO DETALLE SUPERIOR */
+
+.capitulo1-texto .texto.destacado::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 13px;
+
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* LÍNEA INFERIOR */
+
+.capitulo1-texto .texto.destacado::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 60px;
+
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* ==================================================
+   BOTÓN
+================================================== */
+
+.capitulo1-texto button {
+    margin-top: 5px;
+}
+
+
+/* ==================================================
+   ANIMACIONES
+================================================== */
+
+@keyframes entradaFotoCapitulo1 {
+
+    from {
+        opacity: 0;
+        transform: scale(1.035);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes zoomFotoCapitulo1 {
+
+    from {
+        transform: scale(1.08);
+    }
+
+    to {
+        transform: scale(1);
+    }
+
+}
+
+
+@keyframes aparecerNumeroCapitulo1 {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 0.75;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes aparecerTituloCapitulo1 {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==================================================
+   CELULAR
+================================================== */
+
+@media (max-width: 600px) {
+
+    #capitulo1 {
+        padding: 0 18px 70px;
+    }
+
+
+    .capitulo1-foto {
+        width: calc(100% + 36px);
+
+        margin-left: -18px;
+
+        height: 78vh;
+
+        min-height: 500px;
+
+        border-radius: 0 0 28px 28px;
+    }
+
+
+    .capitulo1-foto img {
+        object-position: center center;
+    }
+
+
+    .capitulo1-overlay {
+        padding: 45px 22px 55px;
+    }
+
+
+    .capitulo1-numero {
+        font-size: 10px;
+
+        letter-spacing: 5px;
+    }
+
+
+    .capitulo1-overlay h2 {
+        font-size: 40px;
+
+        line-height: 1.12;
+    }
+
+
+    .capitulo1-texto {
+        margin-top: 60px;
+    }
+
+
+    .capitulo1-texto .fecha {
+        margin-bottom: 40px;
+
+        font-size: 12px;
+
+        letter-spacing: 4px;
+    }
+
+
+    .capitulo1-texto .texto {
+        font-size: 18px;
+
+        line-height: 1.85;
+    }
+
+
+    .capitulo1-texto .texto.destacado {
+        margin-top: 70px;
+
+        margin-bottom: 70px;
+
+        padding: 50px 15px;
+
+        font-size: 29px;
+    }
+
+}
+
+/* ==================================================
+   CAPÍTULO 1 — TOQUE ROMÁNTICO
+================================================== */
+
+#capitulo1 {
+    isolation: isolate;
+}
+
+
+/* RESPLANDOR ROMÁNTICO DETRÁS DE LA ESCENA */
+
+#capitulo1::before {
+    width: 650px;
+    height: 650px;
+
+    top: -280px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(210, 115, 150, 0.20) 0%,
+            rgba(150, 75, 110, 0.10) 35%,
+            transparent 70%
+        );
+
+    filter: blur(60px);
+
+    animation: luzRomantica 8s ease-in-out infinite alternate;
+}
+
+
+/* SEGUNDA LUZ SUAVE */
+
+#capitulo1::after {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    top: 45%;
+    right: -250px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(190, 110, 135, 0.10),
+            transparent 70%
+        );
+
+    filter: blur(70px);
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    animation: luzLateral 10s ease-in-out infinite alternate;
+}
+
+
+/* ==================================================
+   FOTO MÁS ROMÁNTICA
+================================================== */
+
+.capitulo1-foto {
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.8),
+        0 0 80px rgba(170, 90, 125, 0.10);
+}
+
+
+/* LUZ SOBRE LA FOTOGRAFÍA */
+
+.capitulo1-foto::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        radial-gradient(
+            ellipse at center 35%,
+            rgba(255, 190, 205, 0.08),
+            transparent 55%
+        );
+
+    pointer-events: none;
+
+    mix-blend-mode: screen;
+}
+
+
+/* DEGRADADO MÁS SUAVE */
+
+.capitulo1-foto::after {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(8, 4, 7, 0.02) 0%,
+            rgba(8, 4, 7, 0.02) 35%,
+            rgba(8, 4, 7, 0.25) 55%,
+            rgba(8, 4, 7, 0.94) 100%
+        );
+}
+
+
+/* ==================================================
+   TÍTULO MÁS DELICADO
+================================================== */
+
+.capitulo1-numero {
+    text-shadow:
+        0 0 15px rgba(255, 190, 210, 0.25);
+}
+
+
+.capitulo1-overlay h2 {
+    text-shadow:
+        0 5px 30px rgba(0, 0, 0, 0.85),
+        0 0 35px rgba(255, 170, 195, 0.12);
+}
+
+
+/* ==================================================
+   TEXTO
+================================================== */
+
+.capitulo1-texto .texto {
+    text-shadow:
+        0 2px 15px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==================================================
+   MOMENTO "Y ENTONCES TE VI"
+================================================== */
+
+.capitulo1-texto .texto.destacado {
+    text-shadow:
+        0 3px 20px rgba(0, 0, 0, 0.7),
+        0 0 35px rgba(255, 180, 205, 0.18);
+
+    animation:
+        brilloRomantico 4s ease-in-out infinite alternate;
+}
+
+
+/* ESTRELLA */
+
+.capitulo1-texto .texto.destacado::before {
+    text-shadow:
+        0 0 15px rgba(255, 190, 210, 0.7);
+}
+
+
+/* LÍNEA */
+
+.capitulo1-texto .texto.destacado::after {
+    box-shadow:
+        0 0 12px rgba(255, 190, 210, 0.25);
+}
+
+
+/* ==================================================
+   ANIMACIONES
+================================================== */
+
+@keyframes luzRomantica {
+
+    from {
+        transform: translateX(-50%) scale(0.95);
+        opacity: 0.65;
+    }
+
+    to {
+        transform: translateX(-50%) scale(1.08);
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes luzLateral {
+
+    from {
+        transform: translateY(-20px);
+        opacity: 0.45;
+    }
+
+    to {
+        transform: translateY(30px);
+        opacity: 0.8;
+    }
+
+}
+
+
+@keyframes brilloRomantico {
+
+    from {
+        text-shadow:
+            0 3px 20px rgba(0, 0, 0, 0.7),
+            0 0 25px rgba(255, 180, 205, 0.10);
+    }
+
+    to {
+        text-shadow:
+            0 3px 20px rgba(0, 0, 0, 0.7),
+            0 0 40px rgba(255, 180, 205, 0.25);
+    }
+
+}
+
+/* ==================================================
+   PARTÍCULAS ROMÁNTICAS — CAPÍTULO 1
+================================================== */
+
+.particulas-romanticas {
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+
+/* CADA PARTÍCULA */
+
+.particulas-romanticas::before,
+.particulas-romanticas::after {
+    content: "";
+
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 210, 225, 0.75);
+
+    box-shadow:
+        80px 120px 0 rgba(255, 210, 225, 0.35),
+        180px 260px 0 rgba(255, 230, 240, 0.55),
+        310px 170px 0 rgba(255, 210, 225, 0.30),
+        440px 340px 0 rgba(255, 230, 240, 0.45),
+        570px 110px 0 rgba(255, 210, 225, 0.35),
+        700px 280px 0 rgba(255, 230, 240, 0.55),
+        820px 160px 0 rgba(255, 210, 225, 0.30),
+        120px 520px 0 rgba(255, 230, 240, 0.45),
+        260px 620px 0 rgba(255, 210, 225, 0.30),
+        390px 480px 0 rgba(255, 230, 240, 0.55),
+        530px 700px 0 rgba(255, 210, 225, 0.35),
+        670px 560px 0 rgba(255, 230, 240, 0.45),
+        780px 690px 0 rgba(255, 210, 225, 0.30);
+
+    filter: blur(0.3px);
+
+    opacity: 0;
+
+    animation:
+        aparecerParticulas 5s ease-in-out infinite;
+}
+
+
+/* SEGUNDO GRUPO */
+
+.particulas-romanticas::after {
+
+    width: 3px;
+    height: 3px;
+
+    background: rgba(255, 240, 245, 0.65);
+
+    box-shadow:
+        40px 210px 0 rgba(255, 230, 240, 0.35),
+        150px 390px 0 rgba(255, 210, 225, 0.45),
+        290px 90px 0 rgba(255, 240, 245, 0.35),
+        370px 300px 0 rgba(255, 210, 225, 0.50),
+        490px 190px 0 rgba(255, 240, 245, 0.35),
+        610px 420px 0 rgba(255, 210, 225, 0.45),
+        750px 330px 0 rgba(255, 240, 245, 0.30),
+        880px 500px 0 rgba(255, 210, 225, 0.45),
+        210px 700px 0 rgba(255, 240, 245, 0.35),
+        450px 580px 0 rgba(255, 210, 225, 0.40),
+        720px 730px 0 rgba(255, 240, 245, 0.35);
+
+    animation:
+        aparecerParticulas 7s ease-in-out infinite reverse;
+}
+
+
+/* MOVIMIENTO */
+
+@keyframes aparecerParticulas {
+
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    20% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: translateY(-10px);
+    }
+
+    80% {
+        opacity: 0.65;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-45px);
+    }
+
+}
+
+/* ==================================================
+   AJUSTE — PARTÍCULAS SOBRE LA FOTO
+================================================== */
+
+.particulas-romanticas {
+    z-index: 4;
+}
+
+.particulas-romanticas::before,
+.particulas-romanticas::after {
+    top: 0;
+    left: 0;
+}
+
+.capitulo1-foto {
+    z-index: 3;
+}
+
+.capitulo1-texto {
+    position: relative;
+    z-index: 5;
+}
+
+/* =========================================
+   PARTÍCULAS ROMÁNTICAS — VERSIÓN VISIBLE
+========================================= */
+
+.particulas-romanticas {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particulas-romanticas span {
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 220, 232, 0.9);
+
+    box-shadow:
+        0 0 8px rgba(255, 190, 215, 0.9),
+        0 0 18px rgba(255, 170, 200, 0.5);
+
+    animation: particulaFlotando 6s ease-in-out infinite;
+}
+
+
+/* POSICIONES */
+
+.particulas-romanticas span:nth-child(1) {
+    left: 8%;
+    top: 25%;
+    animation-delay: 0s;
+}
+
+.particulas-romanticas span:nth-child(2) {
+    left: 18%;
+    top: 65%;
+    animation-delay: 1.2s;
+}
+
+.particulas-romanticas span:nth-child(3) {
+    left: 28%;
+    top: 35%;
+    animation-delay: 2.4s;
+}
+
+.particulas-romanticas span:nth-child(4) {
+    left: 38%;
+    top: 75%;
+    animation-delay: 0.8s;
+}
+
+.particulas-romanticas span:nth-child(5) {
+    left: 48%;
+    top: 20%;
+    animation-delay: 3s;
+}
+
+.particulas-romanticas span:nth-child(6) {
+    left: 58%;
+    top: 55%;
+    animation-delay: 1.8s;
+}
+
+.particulas-romanticas span:nth-child(7) {
+    left: 68%;
+    top: 30%;
+    animation-delay: 2.8s;
+}
+
+.particulas-romanticas span:nth-child(8) {
+    left: 78%;
+    top: 70%;
+    animation-delay: 0.5s;
+}
+
+.particulas-romanticas span:nth-child(9) {
+    left: 88%;
+    top: 42%;
+    animation-delay: 3.5s;
+}
+
+.particulas-romanticas span:nth-child(10) {
+    left: 15%;
+    top: 45%;
+    animation-delay: 2s;
+}
+
+.particulas-romanticas span:nth-child(11) {
+    left: 72%;
+    top: 18%;
+    animation-delay: 4s;
+}
+
+.particulas-romanticas span:nth-child(12) {
+    left: 42%;
+    top: 45%;
+    animation-delay: 1.5s;
+}
+
+
+/* ANIMACIÓN */
+
+@keyframes particulaFlotando {
+
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.6);
+    }
+
+    20% {
+        opacity: 0.9;
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(-15px) scale(1);
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-55px) scale(0.7);
+    }
+}
+
+/* =========================================
+   PARTÍCULAS — ESCENA CAPÍTULO 1
+========================================= */
+
+.capitulo1-foto {
+    position: relative;
+}
+
+.particulas-romanticas {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    overflow: hidden;
+
+    pointer-events: none;
+}
+
+.particulas-romanticas span {
+    position: absolute;
+
+    display: block;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffdce8;
+
+    box-shadow:
+        0 0 8px #ffdce8,
+        0 0 18px rgba(255, 190, 215, 0.8);
+
+    opacity: 0;
+
+    animation: flotarParticula 6s ease-in-out infinite;
+}
+
+
+/* POSICIONES */
+
+.particulas-romanticas span:nth-child(1) {
+    left: 8%;
+    top: 25%;
+    animation-delay: 0s;
+}
+
+.particulas-romanticas span:nth-child(2) {
+    left: 18%;
+    top: 65%;
+    animation-delay: 1s;
+}
+
+.particulas-romanticas span:nth-child(3) {
+    left: 30%;
+    top: 35%;
+    animation-delay: 2s;
+}
+
+.particulas-romanticas span:nth-child(4) {
+    left: 42%;
+    top: 72%;
+    animation-delay: 3s;
+}
+
+.particulas-romanticas span:nth-child(5) {
+    left: 52%;
+    top: 22%;
+    animation-delay: 1.5s;
+}
+
+.particulas-romanticas span:nth-child(6) {
+    left: 63%;
+    top: 52%;
+    animation-delay: 4s;
+}
+
+.particulas-romanticas span:nth-child(7) {
+    left: 74%;
+    top: 28%;
+    animation-delay: 2.5s;
+}
+
+.particulas-romanticas span:nth-child(8) {
+    left: 86%;
+    top: 68%;
+    animation-delay: 0.5s;
+}
+
+.particulas-romanticas span:nth-child(9) {
+    left: 92%;
+    top: 42%;
+    animation-delay: 3.5s;
+}
+
+.particulas-romanticas span:nth-child(10) {
+    left: 15%;
+    top: 48%;
+    animation-delay: 4.5s;
+}
+
+.particulas-romanticas span:nth-child(11) {
+    left: 70%;
+    top: 15%;
+    animation-delay: 5s;
+}
+
+.particulas-romanticas span:nth-child(12) {
+    left: 45%;
+    top: 42%;
+    animation-delay: 2.8s;
+}
+
+
+/* MOVIMIENTO */
+
+@keyframes flotarParticula {
+
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.5);
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: translateY(-10px) scale(1);
+    }
+
+    75% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-60px) scale(0.6);
+    }
+
+}
+
+/* =========================================
+   REFLEJO DE LUZ — CAPÍTULO 1
+========================================= */
+
+.capitulo1-foto .luz-cinematica {
+    position: absolute;
+    top: -20%;
+    left: -60%;
+    width: 45%;
+    height: 140%;
+    z-index: 3;
+    pointer-events: none;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 190, 215, 0.12),
+        rgba(255, 220, 230, 0.20),
+        rgba(255, 190, 215, 0.08),
+        transparent
+    );
+
+    transform: rotate(12deg);
+    filter: blur(12px);
+
+    animation: pasarLuz 9s ease-in-out infinite;
+}
+
+@keyframes pasarLuz {
+    0% {
+        left: -60%;
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.5;
+    }
+
+    45% {
+        opacity: 0.7;
+    }
+
+    65% {
+        opacity: 0;
+    }
+
+    100% {
+        left: 120%;
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   CAPÍTULO 2 — NUESTRO PRIMER BESO
+   ========================================= */
+
+#capitulo2 {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 45px 15px 90px;
+
+    /* La escena y el texto van uno sobre otro, no en fila */
+    flex-direction: column;
+    justify-content: flex-start;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #3a1d2d 0%,
+            #1d1119 45%,
+            #08070a 100%
+        );
+}
+
+
+/* Luz ambiental */
+
+#capitulo2::before {
+    content: "";
+
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    top: -220px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,110,170,.16),
+            transparent 68%
+        );
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   ESCENA
+   ========================================= */
+
+.escena-beso {
+    position: relative;
+
+    width: min(700px, 100%);
+    height: 620px;
+
+    margin: 0 auto 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================================
+   CORAZÓN DE PARTÍCULAS
+   ========================================= */
+
+#corazonParticulas {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition:
+        opacity 2s ease;
+}
+
+#corazonParticulas.activo {
+    opacity: 1;
+}
+
+
+/* =========================================
+   FOTOS QUE APARECEN COMO DESTELLOS
+   ========================================= */
+
+.recuerdos-beso {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+.recuerdo-beso {
+    position: absolute;
+
+    width: 105px;
+    height: auto;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.65),
+        0 0 22px rgba(255,130,180,.22);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translate(-50%, -50%)
+        scale(.65)
+        rotate(0deg);
+
+    transition:
+        opacity .6s ease,
+        transform .9s cubic-bezier(.2,.8,.2,1),
+        visibility .6s ease;
+
+    will-change:
+        transform,
+        opacity;
+}
+
+
+.recuerdo-beso.destello {
+    visibility: visible;
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1)
+        rotate(var(--rotacion));
+}
+
+
+.recuerdo-beso.desaparecer {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(.82)
+        rotate(var(--rotacion));
+
+    visibility: hidden;
+}
+
+
+/* =========================================
+   FOTO PRINCIPAL
+   ========================================= */
+
+.foto-beso-principal {
+    position: relative;
+    width: min(520px, 82vw);
+    aspect-ratio: 16 / 10;
+    z-index: 5;
+
+    border-radius: 16px;
+    overflow: hidden;
+
+    /* Sombra cinematográfica */
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, .75),
+        0 0 35px rgba(255, 110, 175, .22);
+
+    opacity: 0;
+
+    transform:
+        scale(.88)
+        translateY(25px);
+
+    transition:
+        opacity 1.5s ease,
+        transform 1.8s cubic-bezier(.2, .8, .2, 1);
+
+    /* Para el destello de luz */
+    isolation: isolate;
+}
+
+/* Entrada de la foto */
+.foto-beso-principal.protagonista-visible {
+    opacity: 1;
+
+    transform:
+        scale(1)
+        translateY(0);
+
+    animation:
+        respirarFoto 8s ease-in-out infinite;
+}
+
+/* La fotografía */
+.foto-beso-principal img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 16px;
+
+    /* Pequeño acabado cinematográfico */
+    filter:
+        saturate(1.05)
+        contrast(1.04);
+}
+
+/* Luz que cruza la fotografía al aparecer */
+.foto-beso-principal::after {
+    content: "";
+
+    position: absolute;
+    top: -20%;
+    left: -70%;
+
+    width: 45%;
+    height: 140%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.18),
+            transparent
+        );
+
+    transform: skewX(-18deg);
+
+    pointer-events: none;
+
+    animation:
+        luzFoto 2.5s ease-out 1.2s forwards;
+}
+
+/* Movimiento casi imperceptible */
+@keyframes respirarFoto {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.025);
+    }
+}
+
+/* Destello */
+@keyframes luzFoto {
+
+    0% {
+        left: -70%;
+    }
+
+    100% {
+        left: 130%;
+    }
+}
+
+/* =========================================
+   TEXTO
+   ========================================= */
+
+.capitulo2-texto {
+    position: static;
+
+    z-index: 10;
+
+    max-width: 650px;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.capitulo2-texto .pequeno {
+    font-size: 11px;
+
+    letter-spacing: 6px;
+
+    color:
+        rgba(255,255,255,.55);
+}
+
+
+.capitulo2-texto h2 {
+    margin: 20px 0;
+
+    font-size: 48px;
+
+    font-weight: normal;
+
+    color: white;
+
+    text-shadow:
+        0 5px 30px rgba(0,0,0,.8),
+        0 0 35px rgba(255,170,200,.25);
+}
+
+
+.capitulo2-texto .fecha {
+    margin-bottom: 55px;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    color:
+        rgba(255,210,225,.7);
+}
+
+
+.capitulo2-texto .texto {
+    max-width: 570px;
+
+    margin: 0 auto 30px;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color:
+        rgba(255,255,255,.84);
+}
+
+
+.capitulo2-texto .destacado {
+    margin-top: 70px;
+    margin-bottom: 70px;
+
+    font-size: 36px;
+
+    color: white;
+
+    text-shadow:
+        0 0 35px rgba(255,170,200,.35);
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    #capitulo2 {
+        padding: 30px 10px 80px;
+    }
+
+    .escena-beso {
+        height: 540px;
+    }
+
+    .recuerdo-beso {
+        width: 82px;
+    }
+
+    .capitulo2-texto h2 {
+        font-size: 38px;
+    }
+
+    .capitulo2-texto .texto {
+        font-size: 18px;
+    }
+
+    .capitulo2-texto .destacado {
+        font-size: 30px;
+    }
+}
+
+/* ================================
+   BOTÓN DE MÚSICA
+================================ */
+
+#btnMusica[hidden],
+#btnAtras[hidden] {
+    display: none;
+}
+
+#btnMusica {
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 14px);
+    right: 14px;
+    z-index: 1000;
+
+    width: 44px;
+    height: 44px;
+    max-width: none;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    line-height: 1;
+
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+#btnMusica.silenciada {
+    opacity: 0.55;
+}
+
+
+
+
+/* =====================================================
+   EFECTOS NUEVOS
+===================================================== */
+
+/* ---------- Ken Burns ---------- */
+
+@keyframes kenBurnsSuave {
+    from { scale: 1.02; translate: 0 0; }
+    to   { scale: 1.13; translate: -2.5% -2%; }
+}
+
+.inicio {
+    isolation: isolate;
+}
+
+.inicio-fondo {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(rgba(18, 11, 16, 0.62), rgba(18, 11, 16, 0.88)),
+        url("../img/fotoprincipal.jpg") center center / cover no-repeat;
+
+    animation: kenBurnsSuave 26s ease-in-out infinite alternate;
+}
+
+.marco-boda {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 45px;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+.marco-boda .foto-capitulo {
+    margin: 0;
+    max-width: none;
+    border-radius: 0;
+    box-shadow: none;
+    animation:
+        aparecerFoto 1.5s ease,
+        kenBurnsSuave 26s ease-in-out 1.5s infinite alternate;
+}
+
+.foto-beso-principal img {
+    animation: kenBurnsSuave 22s ease-in-out infinite alternate;
+}
+
+/* ---------- Barra de progreso ---------- */
+
+.barra-progreso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    z-index: 1001;
+    background: rgba(255, 255, 255, 0.08);
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    pointer-events: none;
+}
+
+.barra-progreso.visible {
+    opacity: 1;
+}
+
+.barra-progreso span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #ff7eb6, #ffd1e6);
+    box-shadow: 0 0 10px rgba(255, 126, 182, 0.7);
+    border-radius: 0 3px 3px 0;
+    transition: width 1.1s cubic-bezier(0.22, 0.7, 0.2, 1);
+}
+
+/* ---------- Viñeta y grano de película ---------- */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 900;
+    pointer-events: none;
+    background: radial-gradient(
+        ellipse at center,
+        transparent 58%,
+        rgba(0, 0, 0, 0.38) 100%
+    );
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: 901;
+    pointer-events: none;
+    opacity: 0.07;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 1.3 0 0 0 -.4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation: granoMovil 0.8s steps(1) infinite;
+}
+
+@keyframes granoMovil {
+    0%   { transform: translate(0, 0); }
+    20%  { transform: translate(-3%, 2%); }
+    40%  { transform: translate(2%, -4%); }
+    60%  { transform: translate(-4%, -2%); }
+    80%  { transform: translate(3%, 4%); }
+}
+
+/* ---------- Transición entre capítulos ---------- */
+
+.salir {
+    animation: salirDifuminado 0.7s ease forwards;
+}
+
+@keyframes salirDifuminado {
+    from { opacity: 1; filter: blur(0);   transform: scale(1); }
+    to   { opacity: 0; filter: blur(8px); transform: scale(1.03); }
+}
+
+.aparecer {
+    animation: aparecerDifuminado 1.3s cubic-bezier(0.22, 0.7, 0.2, 1);
+}
+
+@keyframes aparecerDifuminado {
+    from { opacity: 0; filter: blur(10px); transform: scale(0.97); }
+    to   { opacity: 1; filter: blur(0);    transform: scale(1); }
+}
+
+/* ---------- Carta que se escribe sola ---------- */
+
+.contenido-carta .texto {
+    font-family: "Caveat", Georgia, "Times New Roman", serif;
+    font-size-adjust: 0.48;
+    line-height: 1.5;
+}
+
+.contenido-carta.carta-visible.escribiendo > *:not(#btnFinal):not(.pequeno):not(h2) {
+    opacity: 1;
+    transform: none;
+    animation: none;
+}
+
+.contenido-carta.escribiendo #btnFinal {
+    opacity: 0;
+    visibility: hidden;
+    animation: none;
+}
+
+.contenido-carta.escribiendo.fin-escritura #btnFinal {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1.2s ease;
+}
+
+.cursor-carta {
+    display: inline-block;
+    margin-left: 2px;
+    font-weight: normal;
+    color: #8a5a3a;
+    animation: parpadeoCursor 0.9s steps(1) infinite;
+}
+
+@keyframes parpadeoCursor {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0; }
+}
+
+.hint-carta {
+    position: fixed;
+    left: 50%;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 18px);
+    transform: translateX(-50%);
+    z-index: 950;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    white-space: nowrap;
+    background: rgba(18, 11, 16, 0.8);
+    color: rgba(255, 255, 255, 0.85);
+    pointer-events: none;
+}
+
+.hint-carta[hidden] {
+    display: none;
+}
+
+/* ---------- Final: celebración y contador ---------- */
+
+.celebracion {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 800;
+    pointer-events: none;
+}
+
+.contador-final {
+    margin: 26px auto;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #f3b6cf;
+}
+
+.contador-final strong {
+    display: block;
+    font-size: 21px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.contador-final small {
+    display: block;
+    margin-top: 4px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+#final .contenido > *:nth-child(6) { animation-delay: 3.2s; }
+#final .contenido > *:nth-child(7) { animation-delay: 3.9s; }
+#final .contenido > *:nth-child(8) { animation-delay: 4.6s; }
+#final .contenido > *:nth-child(9) { animation-delay: 5.3s; }
+
+/* ---------- Respetar "reducir movimiento" ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .inicio-fondo,
+    .foto-beso-principal img,
+    body::after {
+        animation: none;
+    }
+
+    .marco-boda .foto-capitulo {
+        animation: aparecerFoto 1.5s ease;
+    }
+}
+
+
+/* ---------- Botón Atrás ---------- */
+
+#btnAtras {
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 14px);
+    left: 14px;
+    z-index: 1000;
+
+    width: auto;
+    max-width: none;
+    height: 44px;
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+    line-height: 1;
+
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* ---------- Foto principal del capítulo 2 ---------- */
+
+/* Late junto con el corazón (--latido lo actualiza app.js) */
+.foto-beso-principal {
+    --latido: 0;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.75),
+        0 0 calc(35px + var(--latido) * 700px)
+            rgba(255, 110, 175, calc(0.22 + var(--latido) * 5));
+
+    scale: calc(1 + var(--latido) * 0.3);
+}
+
+/* Se "revela" como una fotografía que se está revelando */
+.foto-beso-principal img {
+    filter:
+        blur(14px)
+        sepia(0.9)
+        brightness(0.55)
+        saturate(0.7)
+        contrast(1);
+
+    transition: filter 3.6s ease-out 0.5s;
+}
+
+.foto-beso-principal.protagonista-visible img {
+    filter:
+        blur(0)
+        sepia(0)
+        brightness(1)
+        saturate(1.05)
+        contrast(1.04);
+}
+
+
+/* =====================================================
+   INVITACIÓN: LA VELA
+===================================================== */
+
+#invitacion {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #1a0d14 0%,
+            #0d0709 70%,
+            #070405 100%
+        );
+}
+
+.contenido-invitacion {
+    position: relative;
+    z-index: 1;
+}
+
+.vela {
+    position: relative;
+    width: 120px;
+    height: 190px;
+    margin: 34px auto 10px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.halo-vela {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    z-index: -1;
+
+    width: 560px;
+    height: 560px;
+    max-width: 150vw;
+
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+    pointer-events: none;
+
+    background: radial-gradient(
+        circle,
+        rgba(255, 170, 80, 0.38) 0%,
+        rgba(255, 120, 60, 0.16) 35%,
+        transparent 68%
+    );
+
+    transition: opacity 1.6s ease, transform 2.4s ease;
+}
+
+.llama {
+    position: absolute;
+    left: 50%;
+    top: 0;
+
+    width: 20px;
+    height: 42px;
+    margin-left: -10px;
+
+    border-radius: 50% 50% 50% 50% / 62% 62% 38% 38%;
+
+    background: radial-gradient(
+        ellipse at 50% 70%,
+        #fff7d6 0%,
+        #ffd36b 35%,
+        #ff9a3c 70%,
+        rgba(255, 120, 40, 0) 100%
+    );
+
+    box-shadow: 0 0 18px 6px rgba(255, 170, 70, 0.55);
+
+    transform-origin: 50% 90%;
+    transform: scale(0);
+    opacity: 0;
+
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.mecha {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+
+    width: 3px;
+    height: 16px;
+    margin-left: -1.5px;
+
+    border-radius: 2px;
+    background: #2a1a14;
+}
+
+.cuerpo-vela {
+    position: absolute;
+    left: 50%;
+    top: 54px;
+
+    width: 56px;
+    height: 118px;
+    margin-left: -28px;
+
+    border-radius: 8px 8px 4px 4px;
+
+    background: linear-gradient(
+        90deg,
+        #d9c19a 0%,
+        #f7e8cf 35%,
+        #fff4de 50%,
+        #f1dcba 70%,
+        #cfb48a 100%
+    );
+
+    box-shadow: inset 0 8px 12px rgba(255, 255, 255, 0.35);
+
+    filter: brightness(0.55);
+    transition: filter 1.5s ease, box-shadow 1.5s ease;
+}
+
+.cuerpo-vela::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+
+    width: 100%;
+    height: 14px;
+
+    border-radius: 50%;
+    background: #f4dfba;
+}
+
+.cuerpo-vela::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 10px;
+
+    width: 8px;
+    height: 34px;
+
+    border-radius: 0 0 8px 8px;
+    background: linear-gradient(#f8e9d0, #efd9b4);
+}
+
+.plato-vela {
+    position: absolute;
+    left: 50%;
+    top: 168px;
+
+    width: 120px;
+    height: 16px;
+    margin-left: -60px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(ellipse, #8a6a3a 0%, #5a4020 100%);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- Vela encendida ---------- */
+
+#invitacion.encendida .halo-vela {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    animation: titilarLuz 3s ease-in-out 2.4s infinite;
+}
+
+#invitacion.encendida .llama {
+    opacity: 1;
+    transform: scale(1);
+    animation: titilarLlama 1.4s ease-in-out 0.6s infinite alternate;
+}
+
+#invitacion.encendida .mecha {
+    background: linear-gradient(#ff8a3c, #2a1a14);
+}
+
+#invitacion.encendida .cuerpo-vela {
+    filter: none;
+    box-shadow:
+        0 0 40px rgba(255, 160, 70, 0.35),
+        inset 0 8px 12px rgba(255, 255, 255, 0.35);
+}
+
+@keyframes titilarLlama {
+    0%   { transform: scale(1, 1) rotate(-1.5deg); }
+    50%  { transform: scale(0.94, 1.07) rotate(1.5deg); }
+    100% { transform: scale(1.04, 0.96) rotate(-1deg); }
+}
+
+@keyframes titilarLuz {
+    0%, 100% { opacity: 1; }
+    45%      { opacity: 0.82; }
+    70%      { opacity: 0.95; }
+}
+
+/* ---------- Pista ---------- */
+
+.inv-pista {
+    font-size: 15px;
+    letter-spacing: 1px;
+    animation: pulsoPista 2.4s ease-in-out infinite;
+}
+
+@keyframes pulsoPista {
+    0%, 100% { opacity: 0.35; }
+    50%      { opacity: 0.85; }
+}
+
+#invitacion.encendida .inv-pista {
+    display: none;
+}
+
+/* ---------- Invitación que sale de la oscuridad ---------- */
+
+.inv-tarjeta > *,
+.inv-botones {
+    opacity: 0;
+}
+
+.inv-esta-noche {
+    margin: 26px 0 2px;
+    font-size: 14px;
+    letter-spacing: 6px;
+    color: #f3b6cf;
+}
+
+.inv-hora {
+    margin: 4px 0 18px;
+    font-family: "Caveat", Georgia, "Times New Roman", serif;
+    font-size-adjust: 0.48;
+    font-size: 46px;
+    line-height: 1.1;
+    color: #ffe2b8;
+    text-shadow: 0 0 22px rgba(255, 170, 80, 0.55);
+}
+
+.inv-linea {
+    font-size: 19px;
+    line-height: 1.7;
+    color: #f2e6ea;
+}
+
+.inv-bonito {
+    margin-top: 14px;
+    font-family: "Caveat", Georgia, "Times New Roman", serif;
+    font-size-adjust: 0.48;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #ffd1e6;
+}
+
+.inv-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: 36px;
+    pointer-events: none;
+}
+
+.inv-botones.listos {
+    pointer-events: auto;
+}
+
+.boton-acepto {
+    background: linear-gradient(135deg, #ff7eb6, #ff4f8f);
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(255, 79, 143, 0.35);
+}
+
+#invitacion.encendida .inv-tarjeta > * {
+    animation: surgirLuz 1.6s ease forwards;
+}
+
+#invitacion.encendida .inv-tarjeta > *:nth-child(1) { animation-delay: 1.4s; }
+#invitacion.encendida .inv-tarjeta > *:nth-child(2) { animation-delay: 2.2s; }
+#invitacion.encendida .inv-tarjeta > *:nth-child(3) { animation-delay: 3.4s; }
+#invitacion.encendida .inv-tarjeta > *:nth-child(4) { animation-delay: 4.4s; }
+
+#invitacion.encendida .inv-botones {
+    animation: surgirLuz 1.2s ease 5.8s forwards;
+}
+
+@keyframes surgirLuz {
+    from { opacity: 0; transform: translateY(14px); filter: blur(6px); }
+    to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    #invitacion.encendida .llama,
+    #invitacion.encendida .halo-vela,
+    .inv-pista {
+        animation: none;
+    }
+
+    #invitacion.encendida .inv-tarjeta > *,
+    #invitacion.encendida .inv-botones {
+        animation: none;
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+}
+
+
+/* ---------- Botón "Acepto" como enlace de WhatsApp ---------- */
+
+.inv-botones > * {
+    width: 100%;
+    max-width: 330px;
+    box-sizing: border-box;
+}
+
+.boton-enlace {
+    display: block;
+    padding: 16px 28px;
+    border-radius: 50px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.boton-enlace[hidden] {
+    display: none;
+}
+
+/* =========================================
+   TÍTULO SOBRE LA FOTO — CAPÍTULO 2
+========================================= */
+
+.foto-beso-principal::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 6;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(8, 4, 7, 0.72) 0%,
+            rgba(8, 4, 7, 0.18) 38%,
+            rgba(8, 4, 7, 0.05) 65%,
+            rgba(8, 4, 7, 0.45) 100%
+        );
+
+    pointer-events: none;
+}
+
+/* ========================================
+   ESTILO ROMÁNTICO DEL PRIMER BESO
+======================================== */
+
+.capitulo2-texto p {
+    max-width: 560px;
+    margin: 0 auto 18px;
+    padding: 0 12px;
+
+    font-family: 'Caveat', cursive;
+    font-size: clamp(23px, 5vw, 29px);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+
+    color: rgba(255, 255, 255, 0.94);
+    text-align: center;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(255, 180, 200, 0.15);
+}
+
+/* Evita que el texto quede demasiado pegado al título */
+.capitulo2-texto h2 {
+    margin-bottom: 28px;
+}
+
+/* Resalta las pequeñas frases románticas */
+.capitulo2-texto .pequeno {
+    color: #f4c5d4;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   PORTAL — EL CORAZÓN QUE SE LLENA
+   ========================================= */
+.portal{position:fixed;inset:0;z-index:2000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:24px;text-align:center;background:radial-gradient(circle at 50% 40%,#3a1428 0%,#1a0b14 55%,#0b060a 100%);transition:opacity 1.1s ease,visibility 1.1s;overflow:hidden}
+.portal.saliendo{opacity:0;visibility:hidden;pointer-events:none}
+.portal.oculto-total{display:none}
+.portal-brillo{position:absolute;left:50%;top:44%;width:120vmin;height:120vmin;transform:translate(-50%,-50%) scale(.6);border-radius:50%;background:radial-gradient(circle,rgba(255,126,182,.35),transparent 65%);opacity:.25;transition:opacity .8s,transform .8s;pointer-events:none}
+.portal-titulo{position:relative;margin:0;letter-spacing:4px}
+.portal-corazon{position:relative;width:min(72vw,320px);aspect-ratio:100/92;padding:0;border:0;background:none;border-radius:0;box-shadow:none;cursor:pointer;-webkit-tap-highlight-color:transparent;animation:portalLatido 1.6s ease-in-out infinite}
+.portal-corazon svg{display:block;width:100%;height:100%;overflow:visible}
+.portal-borde{fill:none;stroke:#ffc2dc;stroke-width:1.6;stroke-linejoin:round}
+.portal-liquido{transform:translateY(95px);transition:transform .9s cubic-bezier(.3,1.3,.5,1)}
+.portal-ola{animation:portalOla 4s linear infinite}
+.portal-corazon:hover,.portal-corazon:active{box-shadow:none!important;background:none!important;transform:none}
+.portal-corazon.toque{animation:portalToque .45s ease}
+.portal-corazon.lleno{animation:portalLleno 1s ease forwards}
+.portal-frase{position:relative;margin:0;min-height:3.2em;max-width:300px;font-family:Georgia,serif;font-size:1.15rem;line-height:1.5;color:#ffe3ef;transition:opacity .35s}
+.portal-frase.cambia{opacity:0}
+.portal-progreso{position:relative;width:min(70vw,260px)}
+.portal-barra{height:5px;border-radius:5px;background:rgba(255,255,255,.12);overflow:hidden}
+.portal-barra span{display:block;height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,#e84a8a,#ffc2dc);transition:width .8s ease}
+.portal-progreso p{margin:8px 0 0;font-size:.8rem;letter-spacing:2px;color:rgba(255,194,220,.7)}
+.portal-flota{position:fixed;z-index:2001;font-size:22px;pointer-events:none;animation:portalFlota 1.6s ease-out forwards}
+@keyframes portalLatido{0%,100%{transform:scale(1)}14%{transform:scale(1.05)}28%{transform:scale(1)}42%{transform:scale(1.03)}}
+@keyframes portalToque{0%{transform:scale(1)}35%{transform:scale(1.14)}100%{transform:scale(1)}}
+@keyframes portalLleno{0%{transform:scale(1)}30%{transform:scale(1.22)}60%{transform:scale(1.1)}100%{transform:scale(1.16)}}
+@keyframes portalOla{to{transform:translateX(100px)}}
+@keyframes portalFlota{0%{opacity:1;transform:translate(0,0) scale(.6)}100%{opacity:0;transform:translate(var(--dx),-150px) scale(1.2)}}
+@media (prefers-reduced-motion:reduce){.portal-corazon,.portal-ola{animation:none}.portal-liquido{transition:none}}
+
+
+/* =========================================
+   PULIDO VISUAL (legibilidad y armonía)
+   ========================================= */
+
+/* Fecha del capítulo 1: más legible */
+.capitulo1-texto .fecha{color:rgba(255,194,220,.9);font-size:14px}
+
+/* Frases destacadas: mismo estilo suave y elegante en los capítulos 3, 5 y 6 */
+#capitulo3 .texto.destacado,#capitulo5 .texto.destacado,#capitulo6 .texto.destacado{
+    font-weight:400;font-style:italic;font-size:21px;line-height:1.55;color:#ffd6e7;margin:30px 0}
+
+/* Capítulo 3: fecha en una sola línea y título con aire */
+.fecha-boda{display:flex;align-items:baseline;justify-content:center;gap:14px;margin:22px 0 28px}
+.fecha-boda span{font-size:46px;line-height:1}
+.fecha-boda small{font-size:12px;letter-spacing:4px}
+#capitulo3 h2{margin:6px 0 22px}
+
+/* Capítulo 4: fotos con el mismo encuadre y menos espacio vacío */
+.recuerdo{margin:34px 0}
+#capitulo4 .recuerdo img{aspect-ratio:4/3;object-fit:cover;object-position:center 35%}
+
+/* Capítulo 6: la cita bíblica como una pieza especial */
+.frase-biblica{margin:38px auto 44px;padding:22px 16px;max-width:340px;
+    border-top:1px solid rgba(255,194,220,.3);border-bottom:1px solid rgba(255,194,220,.3)}
+.frase-biblica p{font-style:italic;font-size:18px;line-height:1.7;color:#ffe3ef}
+.frase-biblica span{display:block;margin-top:12px;font-size:13px;letter-spacing:2px;color:#f5d28a}
+
+/* Sobre: la fecha ya no queda tapada por la solapa */
+.sobre-frente{justify-content:flex-end;padding-bottom:26px;box-sizing:border-box}
+
+/* Carta: columna más ancha, letra cómoda y menos largo */
+.contenido-carta{padding:44px 24px}
+.contenido-carta .texto{font-size:17px;line-height:1.75;margin:0 0 18px;text-align:left}
+.contenido-carta .texto.destacado{font-size:20px;line-height:1.6;font-weight:600;font-style:italic;text-align:center;margin:30px 0}
+
+#capitulo4 .recuerdo{min-height:62vh}
+
+#capitulo3 .fecha-boda{display:flex!important;flex-direction:row!important;align-items:baseline!important;justify-content:center!important;flex-wrap:nowrap!important;gap:14px!important;margin:22px 0 28px!important}
+#capitulo3 .fecha-boda span{font-size:46px!important;line-height:1!important}
+#capitulo3 .fecha-boda small{font-size:12px!important;letter-spacing:4px!important;margin:0!important}
+
+/* =========================================
+   PANTALLA FINAL — compacta para celulares pequeños
+   ========================================= */
+#final .contenido{padding-top:64px!important;padding-bottom:18px!important;min-height:0!important}
+#final .contenido > *{margin-top:0!important;margin-bottom:10px!important}
+#final h1{font-size:2rem!important;line-height:1.2!important;margin:4px 0 12px!important}
+#final .texto.destacado{font-size:19px!important;line-height:1.4!important}
+#final .texto{font-size:16px!important;line-height:1.4!important}
+#final .contador-final{margin:4px 0 10px!important}
+#final #btnUltimaSorpresa{position:sticky;bottom:16px;margin-top:8px!important;z-index:5;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+
+/* =========================================
+   PANTALLA FINAL COMPACTA (botón siempre a la vista)
+   ========================================= */
+#final .contenido{padding-top:64px!important;padding-bottom:22px!important}
+#final .contenido>*{margin-top:0!important;margin-bottom:10px!important}
+#final h1{font-size:2.1rem!important;line-height:1.2!important;margin:2px 0 12px!important}
+#final .texto{font-size:16px!important;line-height:1.5!important}
+#final .texto.destacado{font-size:19px!important;line-height:1.4!important}
+#final .contador-final{margin:4px 0 8px!important}
+#btnUltimaSorpresa{position:sticky;bottom:16px;margin-top:14px!important;z-index:5}
+
+/* Nombres de las niñas (capítulo 5) */
+.nombre-hija{margin:14px 0 4px;font-family:Georgia,serif;font-weight:400;font-size:24px;letter-spacing:2px;color:#ffd6e7}
+
+
+/* Botón "Acepto": invisible hasta que ella enciende la vela y aparece el texto */
+#invitacion .inv-botones{visibility:hidden;opacity:0}
+#invitacion.encendida .inv-botones{animation:none}
+#invitacion .inv-botones.listos{visibility:visible;animation:surgirLuz 1.2s ease forwards}
+
+/* Pantalla final: frase equilibrada y con aire */
+#final .texto.destacado{font-weight:400!important;font-style:italic;color:#ffd6e7!important;text-wrap:balance;max-width:320px;margin:12px auto 26px!important;font-size:21px!important}
+#final .pequeno{margin-bottom:6px!important}
